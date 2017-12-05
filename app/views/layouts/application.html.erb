@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ajax</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <header>
+      <nav class="blue">
+        <div class="nav-wrapper blue">
+          <%= link_to 'Users', root_path, class: 'brand-logo left'%>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><%= link_to 'Home', root_path %></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <%= yield %>
+    </main>
+    <footer class="page-footer blue">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 l6">
+            <h5 class="white-text">Users from External JSON Server</h5>
+            <p class="grey-text text-lighten-4">All data originated from an external server.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li>
+                <%= link_to 'Users', root_path %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2017 Copyright <a href="http:/www.JaceGold.com">Jace P. Gold</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
